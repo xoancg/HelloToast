@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun countUp(view: View) {
-
         ++mCount
         mShowCount.setText(mCount.toString())
     }
