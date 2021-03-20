@@ -15,14 +15,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         mShowCount = findViewById(R.id.tvShowCount)
-
-
     }
 
     fun showToast(view: View) {
         Toast.makeText(this, R.string.toast, Toast.LENGTH_SHORT).show()
 
     }
+
     fun countUp(view: View) {
         ++mCount
         mShowCount.setText(mCount.toString())
