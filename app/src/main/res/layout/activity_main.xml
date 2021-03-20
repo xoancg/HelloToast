@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFF00"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnToast"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="627dp"
+        android:layout_marginBottom="436dp"
+        android:onClick="showToast"
         android:text="@string/toast"
         app:layout_constraintBottom_toTopOf="@+id/btnCount"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,6 +30,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/count"
+        android:onClick="countUp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -36,9 +39,11 @@
         android:id="@+id/tvShowCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textAlignment="center"
-        android:textSize="160"
+        android:gravity="center_vertical"
+        android:text="@string/count_inicial_value"
+        android:textAlignment="gravity"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="160sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnCount"
         app:layout_constraintEnd_toEndOf="parent"
